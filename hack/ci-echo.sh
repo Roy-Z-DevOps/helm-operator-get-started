@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-repository="gcr.io/echoapp-320414/echoapp"
+repository="gcr.io/echoapp-320414/echoappv2"
 branch="master"
-version=""
+version="latest"
 commit=$(cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1 | awk '{print tolower($0)}')
 
 while getopts :r:b:v: o; do
