@@ -6,7 +6,7 @@ app:
   replicaCount: 3
   container:
     name: echoappv4
-    image: gcr.io/echoapp-320414/echoapp:v4
+    image: gcr.io/echoapp-320414/echoappv2:latest
     port: 3000
   requests:
     memory: "64Mi"

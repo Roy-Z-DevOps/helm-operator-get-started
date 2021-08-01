@@ -17,5 +17,5 @@ spec:
     app:
       container:
         image: gcr.io/echoapp-320414/echoapp:v4
-    replicaCount: 1
+      replicaCount: 1
  
