@@ -14,8 +14,8 @@ spec:
     path: charts/echoChart
     ref: master
   values:
-    image:
-      repository: gcr.io/echoapp-320414/echoapp
-      version: v4
+    app:
+      container:
+        image: gcr.io/echoapp-320414/echoapp:v4
     replicaCount: 1
  
