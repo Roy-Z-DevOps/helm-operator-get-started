@@ -17,7 +17,7 @@ app:
 
 mongoSecret:
   name: mongodb-secret
-  url: bW9uZ29kYjovL3Jvb3Q6cGFzc3dvcmRAbW9uZ28tbW9uZ29kYi5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsOjI3MDE3L2VjaG8/YXV0aFNvdXJjZT1hZG1pbgo=
+  url: bW9uZ29kYjovL3Jvb3Q6cGFzc3dvcmRAZWNoby1tb25nb2RiLTAuZWNoby1tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwsZWNoby1tb25nb2RiLTEuZWNoby1tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNobz9hdXRoU291cmNlPWFkbWluCg==
 
   
 config: 
@@ -42,3 +42,11 @@ ingress:
   name: echo-ingress
 #  namespace: default
   host: k8s-task3-roy.tk
+
+mongodb:
+  auth:
+    rootPassword: password
+  architecture: replicaset
+
+
+    
