@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}
+  labels:
+    app: {{ .Values.app.labels.app }}
+    version: {{ .Values.app.labels.version }}
+spec:
+  replicas: {{ .Values.app.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.app.labels.app }}
+      version: {{ .Values.app.labels.version }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.labels.app }}
+        version: {{ .Values.app.labels.version }}
+    spec:
+      containers:
+        - name: {{ .Values.app.container.name }}
+          image: {{ .Values.app.container.image }}
+          ports:
+            - containerPort: {{ .Values.app.container.port }}
+          envFrom:
+            - secretRef:
+                name: {{ .Values.mongoSecret.name }}
+            - configMapRef:
+                name: {{ .Values.config.name }}
+          resources:
+            requests:
+              memory: {{ .Values.app.requests.memory }}
+              cpu: {{ .Values.app.requests.cpu }} 
+            limits:
+              memory: {{ .Values.app.limits.memory }}
+              cpu: {{ .Values.app.limits.memory }}

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Values.mongoSecret.name }}
+type: Opaque
+data:
+  MONGODBURL: {{ .Values.mongoSecret.url }}
