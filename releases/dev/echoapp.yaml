@@ -8,14 +8,14 @@ metadata:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:dev-*
 spec:
-  releaseName: echoapp-dev
+  releaseName: echo
   chart:
     git: git@github.com:Roy-Z-DevOps/helm-operator-get-started
     path: charts/echoChart
     ref: master
   values:
     image:
-      repository: stefanprodan/podinfo
+      repository: gcr.io/echoapp-320414/echoapp
       version: v4
     replicaCount: 1
     hpa:
