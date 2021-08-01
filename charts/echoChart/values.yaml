@@ -17,7 +17,7 @@ app:
 
 mongoSecret:
   name: mongodb-secret
-  url: bW9uZ29kYjovL3Jvb3Q6cGFzc3dvcmRAZWNoby1tb25nb2RiLTAuZWNoby1tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwsZWNoby1tb25nb2RiLTEuZWNoby1tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNobz9hdXRoU291cmNlPWFkbWluCg==
+  #url: bW9uZ29kYjovL3Jvb3Q6cGFzc3dvcmRAZWNoby1tb25nb2RiLTAuZWNoby1tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwsZWNoby1tb25nb2RiLTEuZWNoby1tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNobz9hdXRoU291cmNlPWFkbWluCg==
 
   
 config: 
@@ -54,6 +54,9 @@ ingress:
 mongodb:
   auth:
     rootPassword: password
+    username: echo
+    password: password
+    database: echo
   architecture: replicaset
 
 cert-manager:

@@ -18,5 +18,4 @@ spec:
       repository: gcr.io/echoapp-320414/echoapp
       version: v4
     replicaCount: 1
-    hpa:
-      enabled: false
+ 
