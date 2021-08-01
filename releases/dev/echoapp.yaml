@@ -17,6 +17,6 @@ spec:
     app:
       container:
         image: gcr.io/echoapp-320414/echoappv2
-        tag: v4
+        tag: latest
       replicaCount: 1
  
