@@ -57,7 +57,4 @@ mongodb:
     username: echo
     password: password
     database: echo
-  architecture: replicaset
-
-cert-manager:
-  installCRDs: true
+  architecture: "replicaset"

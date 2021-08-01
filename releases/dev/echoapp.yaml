@@ -16,6 +16,6 @@ spec:
   values:
     app:
       container:
-        image: gcr.io/echoapp-320414/echoapp:v4
+        image: gcr.io/echoapp-320414/echoappv2:latest
       replicaCount: 1
  
