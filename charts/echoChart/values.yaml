@@ -33,14 +33,22 @@ service:
   
 clusterIssuer:
   name: letsencrypt
-  namespace: cert-manager
+  namespace: default
   email: rz451997@gmail.com
   server: 'https://acme-v02.api.letsencrypt.org/directory'
   keyname: echo-issuer-account-key
   
+certificate:
+  name: echo-certificate
+  namespace: default
+  secretName: echo-certificate-key
+  
+
+
+
 ingress:
   name: echo-ingress
-#  namespace: default
+  namespace: default
   host: k8s-task3-roy.tk
 
 mongodb:
@@ -48,5 +56,5 @@ mongodb:
     rootPassword: password
   architecture: replicaset
 
-
-    
+cert-manager:
+  installCRDs: true
