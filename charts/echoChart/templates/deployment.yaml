@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.app.container.name }}
-          image: {{ .Values.app.container.image }}
+          image: '{{ .Values.app.container.image }}:{{ .Values.app.container.tag }}'
           ports:
             - containerPort: {{ .Values.app.container.port }}
           envFrom:
