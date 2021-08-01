@@ -4,4 +4,4 @@ metadata:
   name: {{ .Values.mongoSecret.name }}
 type: Opaque
 data:
-  MONGODBURL: {{- printf "mongodb://%s:%s@echo-mongodb-0.echo-mongodb-headless.%s.svc.cluster.local,echo-mongodb-1.echo-mongodb-headless.%s.svc.cluster.local:27017/%s" .Values.mongodb.auth.username .Values.mongodb.auth.password .Release.Namespace .Release.Namespace .Values.mongodb.auth.database  | b64enc | indent 2 }}
+  MONGODBURL: {{- printf "mongodb://root:%s@echo-mongodb-0.echo-mongodb-headless.%s.svc.cluster.local,echo-mongodb-1.echo-mongodb-headless.%s.svc.cluster.local:27017/echo?authSource=admin" .Values.mongodb.auth.rootPassword .Release.Namespace .Release.Namespace  | b64enc | quote | indent 2 }}

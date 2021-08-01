@@ -19,7 +19,7 @@ mongoSecret:
   name: mongodb-secret
   #url: bW9uZ29kYjovL3Jvb3Q6cGFzc3dvcmRAZWNoby1tb25nb2RiLTAuZWNoby1tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwsZWNoby1tb25nb2RiLTEuZWNoby1tb25nb2RiLWhlYWRsZXNzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWw6MjcwMTcvZWNobz9hdXRoU291cmNlPWFkbWluCg==
 
-  
+
 config: 
   name: echov4config
   port: "\"3000\""
@@ -33,7 +33,7 @@ service:
   
 clusterIssuer:
   name: letsencrypt
-  namespace: default
+  namespace: cert-manager
   email: rz451997@gmail.com
   server: 'https://acme-v02.api.letsencrypt.org/directory'
   keyname: echo-issuer-account-key
@@ -54,7 +54,7 @@ ingress:
 mongodb:
   auth:
     rootPassword: password
-    username: echo
-    password: password
-    database: echo
+  
+
+
   architecture: "replicaset"
