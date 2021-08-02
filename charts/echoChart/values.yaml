@@ -7,7 +7,7 @@ app:
   container:
     name: echoappv4
     image: gcr.io/echoapp-320414/echoapp
-    tag: latest
+    tag: ""
     port: 3000
   requests:
     memory: "64Mi"
