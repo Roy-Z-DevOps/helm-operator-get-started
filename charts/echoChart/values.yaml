@@ -3,7 +3,7 @@ app:
   labels:
     app: echoapp
     version: v4
-  replicaCount: 3
+  replicaCount: 2
   container:
     name: echoappv4
     image: gcr.io/echoapp-320414/echoapp
