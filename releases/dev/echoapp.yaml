@@ -16,6 +16,7 @@ spec:
   values:
     app:
       container:
+        repository: "gcr.io/echoapp-320414/echoapp"
         tag: "dev-1.0.0"
     clusterIssuer:
       namespace: dev
