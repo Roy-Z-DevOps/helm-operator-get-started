@@ -14,10 +14,6 @@ spec:
     path: charts/echoChart
     ref: master
   values:
-    app:
-      container:
-        tag: latest
-      replicaCount: 3
     clusterIssuer:
       namespace: dev
     certificate:
