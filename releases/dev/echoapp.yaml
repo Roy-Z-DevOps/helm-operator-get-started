@@ -16,7 +16,7 @@ spec:
   values:
     app:
       container:
-        tag: 1.0.0
+        tag: latest
       replicaCount: 3
     clusterIssuer:
       namespace: dev
