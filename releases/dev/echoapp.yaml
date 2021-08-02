@@ -16,7 +16,7 @@ spec:
   values:
   app:
     container:
-      tag: dev-1.0.0
+      tag: "dev-1.0.0"
     clusterIssuer:
       namespace: dev
     certificate:
